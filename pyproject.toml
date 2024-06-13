@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "bible-get"
+version = "0.1.0"
+description = "A command line tool to get Bible verses"
+authors = ["Ivan Dustin Bilon <ivan22.dust@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "bibleget" }]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+reference-parser = {git = "https://github.com/natureframework/reference-parser.git"}
+pandas = "^2.2.2"
+
+[tool.poetry.scripts]
+bible-get = "bibleget.main:main"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

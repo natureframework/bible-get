@@ -16,6 +16,11 @@ pandas = "^2.2.2"
 bible-get = "bibleget.main:main"
 
 
+[tool.poetry.group.dev.dependencies]
+black = "^24.4.2"
+flake8 = "^7.0.0"
+pylint = "^3.2.3"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

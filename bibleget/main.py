@@ -1,6 +1,6 @@
-from sys import argv, stdout
 from pathlib import Path
 from os import environ
+from sys import argv
 from pandas import read_csv
 from referenceparser import parse
 from .select import select
@@ -12,5 +12,4 @@ def main():
     book = reference.book.replace(" ", "-")
     filepath = next(directory.glob(f"*/*-{book}.csv"))
     dataframe = select(read_csv(filepath), reference)
-    words = dataframe["word"]
-    stdout.write(" ".join(words) + "\n")
+    print(" ".join(dataframe["word"]))
